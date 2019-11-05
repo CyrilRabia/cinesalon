@@ -45,6 +45,14 @@ class FrontController extends AbstractController
         return $this->render('Front/qui-sommes.html.twig');
     }
 
+    /**
+     * @Route("/mnotre-concept", name="concept")
+     */
+    public function concept()
+    {
+        return $this->render('Front/concept.html.twig');
+    }
+
     /*
     /**
      * @Route("/front_search_property", name="front_search_property")
