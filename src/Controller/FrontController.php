@@ -18,16 +18,39 @@ class FrontController extends AbstractController
      */
     public function index()
     {
-        return $this->redirectToRoute('app_login');
+        return $this->render('Front/home.html.twig');
     }
 
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+        return $this->render('Front/contact.html.twig');
+    }
 
+    /**
+     * @Route("/qui-sommes-nous", name="who_are")
+     */
+    public function info()
+    {
+        return $this->render('Front/qui-sommes.html.twig');
+    }
 
+    /**
+     * @Route("/mention-legale", name="mention")
+     */
+    public function mention()
+    {
+        return $this->render('Front/qui-sommes.html.twig');
+    }
+
+    /*
     /**
      * @Route("/front_search_property", name="front_search_property")
      * @param Request $request
      * @return JsonResponse
-     */
+
     public function front_search_property(Request $request)
     {
 
@@ -39,7 +62,7 @@ class FrontController extends AbstractController
         return new JsonResponse(json_encode(
             $html
         ), 200);
-    }
+    }*/
 
 
 }

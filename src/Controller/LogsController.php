@@ -47,12 +47,6 @@ class LogsController extends AbstractController
             $user->setBanned(0);
             $manager->persist($user);
             $manager->flush();
-
-            $chat = new Chat();
-            $chat->setUser($user);
-            $chat->setTitle('Discussion');
-            $manager->persist($chat);
-            $manager->flush();
         }
         return $this->render('Logs/subscribe.html.twig',[
             'form'=>$form->createView()

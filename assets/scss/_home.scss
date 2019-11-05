@@ -1,192 +1,209 @@
-#fonctionnalite{
-  background-color: #ECE8E4;
-  padding: 50px 10px;
-  width: 100%;
-  text-align: center;
+body{
+  background-color: #1f1f1f !important;
+  color: white;
+  padding-top: 75px;
+  font-family: Montserrat;
+  font-weight: 200;
+  overflow-x: hidden;
+}
 
-  h2 {
-    text-align: center;
+#intro {
+  height: calc(100vh - 95px);
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  .logo{
+    width: 750px;
+    height: auto;
+    margin:-185px auto 0 auto;
+  }
+  .mention{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: Montserrat;
+    font-weight: 300;
+    text-decoration: underline;
+    &:hover{
+      color: white;
+    }
   }
 }
 
-.btn-rounded{
-  margin-top: 25px;
-  display: inline-block;
-  text-transform: uppercase;
+
+@media (max-width: 1015px) {
+  #intro{
+    .logo{
+      width: 550px;
+    }
+  }
+  .text-anim{
+    font-size: 26px !important;
+  }
+  .link-anim{
+
+  }
+}
+
+@media (max-width: 767px) {
+  #intro{
+    .logo{
+      width: 450px;
+    }
+  }
+  .text-anim{
+    font-size: 24px !important;
+  }
+  .link-anim{
+
+  }
+}
+
+@media (max-width: 670px) {
+  .text-anim{
+    transform: translateX(-50%);
+  }
+  .link-anim{
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 495px) {
+  #intro{
+    .wrapper{
+      padding: 0;
+    }
+    .logo{
+      width: 330px;
+      margin: -185px auto 0 auto;
+    }
+  }
+}
+
+/*
+==========================================================================
+	 Mixins
+==========================================================================
+ */
+@mixin anim-filter($filter, $value) {
+  -webkit-filter: #{$filter}unquote("(#{$value})");
+  -moz-filter: #{$filter}unquote("(#{$value})");
+  -ms-filter: #{$filter}unquote("(#{$value})");
+  filter: #{$filter}unquote("(#{$value})");
+}
+@mixin anim-transition($property, $value) {
+  -webkit-transition: $property, $value;
+  -moz-transition: $property, $value;
+  -ms-transition: $property, $value;
+  transition: $property, $value;
+}
+@mixin anim-transform($property, $value) {
+  -webkit-transform:  #{$property}unquote("(#{$value})");
+  -moz-transform: #{$property}unquote("(#{$value})");
+  -ms-transform: #{$property}unquote("(#{$value})");
+  transform: #{$property}unquote("(#{$value})");
+}
+
+.text-anim {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: Montserrat sans-serif;
+  font-weight: 300;
+  letter-spacing: -3.5px;
+}
+
+
+
+/*
+==========================================================================
+	 Main Animation
+==========================================================================
+*/
+
+.text-anim {
+  width: fit-content;
   position: relative;
-  max-width: 300px;
-  min-width: 232px;
-  border-radius: 21px;
-  background-color: #2050BC;
-  text-align: center;
-  color: #fff !important;
-  font-size: 14px;
-  line-height: 16px;
-  padding: 14px 20px;
-  text-decoration: none !important;
+  top: 115px;
+  left: 50%;
 
+  span {
+    font-family: Montserrat;
+    font-weight: 300;
+    opacity: 0;
+    @include anim-transition (all, 550ms);
+    @include anim-filter(blur, 25px);
+    @include anim-transform(translateZ, 0);
+  }
+
+  $letters: 27; //Define number of letters in animation - including spaces
+  $timing: 35ms; //Delay between letters
+
+  //Sets timing differntly for each letter
+  @while $letters > 0 {
+    span:nth-child(#{$letters})
+    {
+      -webkit-transition-delay: $timing * $letters;
+      -moz-transition-delay: $timing * $letters;
+      -ms-transition-delay: $timing * $letters;
+      transition-delay: $timing * $letters;
+    }
+    $letters: $letters - 1;
+  }
 }
 
+//Class added that animates
+.text-anim.animate span {
+  opacity: 1;
+  @include anim-filter(blur, 0px);
+}
 
-.btn-rounded-brown{
-  margin-top: 25px;
-  display: inline-block;
-  text-transform: uppercase;
+.link-intro{
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1.0px;
+  &:hover{
+    color: #e8e8e8;
+    text-decoration: none;
+  }
+}
+
+.link-anim {
+  width: fit-content;
   position: relative;
-  max-width: 300px;
-  min-width: 232px;
-  border-radius: 21px;
-  background-color: #DBC5AD;
-  text-align: center;
-  color: #fff !important;
-  font-size: 14px;
-  line-height: 16px;
-  padding: 14px 20px;
-  text-decoration: none !important;
+  top: 125px;
+  left: 50%;
 
-}
-
-.btn-rounded:hover {
-  font-weight: bold;
-}
-
-#blog{
-  padding: 50px 10px;
-  display: block;
-
-  h2{
-    text-align: center;
+  span {
+    font-family: Montserrat;
+    font-weight: 300;
+    opacity: 0;
+    @include anim-transition (all, 550ms);
+    @include anim-filter(blur, 25px);
+    @include anim-transform(translateZ, 0);
   }
 
-  #container_carousel_blog{
-    width: 80%;
-    max-width: 800px;
-    height:auto;
-    margin: 50px auto;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 18px rgba(0,0,0,.2);
+  $letters: 20; //Define number of letters in animation - including spaces
+  $timing: 35ms; //Delay between letters
 
-    .carousel-item{
-      img{
-        width: 100%;
-        height: auto;
-      }
-      .carousel-caption{
-        background-color: rgba(0,0,0,0.5);
-      }
+  //Sets timing differntly for each letter
+  @while $letters > 0 {
+    span:nth-child(#{$letters})
+    {
+      -webkit-transition-delay: $timing * $letters;
+      -moz-transition-delay: $timing * $letters;
+      -ms-transition-delay: $timing * $letters;
+      transition-delay: $timing * $letters;
     }
+    $letters: $letters - 1;
   }
 }
 
-.input-text-home{
-  border:3px solid #DBC5AD;
-  border-radius:7px;
-  width: 250px;
-  height: 35px;
-  font-size:18px ;
+//Class added that animates
+.link-anim.animate span {
+  opacity: 1;
+  @include anim-filter(blur, 0px);
 }
-
-#avis{
-  background-color: #ECE8E4;
-  padding: 50px 10px;
-  width: 100%;
-  text-align: center;
-
-  h2 {
-    text-align: center;
-  }
-}
-
-.background_landing{
-  width: 100%;
-  height: auto;
-  padding: 100px 0px 160px 0px;
-}
-
-.container_avis{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  .item_avis{
-    width: 320px;
-    height: 180px;
-    border-radius: 15px;
-    background-color: white;
-    padding: 15px;
-    text-align: left;
-    box-shadow: 0 0 18px rgba(0,0,0,.2);
-    margin: 15px;
-    .header_opinion{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      .title{
-        font-weight: bold;
-        text-align: left;
-      }
-      .note_opinion{
-        width: 118px;
-        ul{
-          padding: 0;
-          margin: 0;
-          list-style: none;
-          li{
-            list-style: none;
-            display:inline-block;
-          }
-        }
-        .icon-star-full{
-          background: url('../images/star-icon.png') no-repeat center;
-          background-size: 20px 20px;
-          width: 20px;
-          height: 20px;
-          display: block;
-        }
-        .icon-star-empty{
-          background: url('../images/star-icon-none.png') no-repeat center;
-          background-size: 20px 20px;
-          width: 20px;
-          height: 20px;
-          display: block;
-        }
-      }
-    }
-    .content_opinion{
-      text-align: left;
-    }
-  }
-}
-
-@media (max-width: 1024px){
-  #blog{
-    #container_carousel_blog{
-      width: 98%;
-    }
-  }
-}
-
-@media (max-width: 719px){
-  .container_avis{
-    .item_avis{
-      height: auto;
-    }
-  }
-}
-
-
-@media (max-width: 414px){
-  .background_landing{
-    padding: 20px 0 100px 0;
-  }
-}
-
-@media (max-width: 400px){
-  .background_landing{
-    padding: 20px 0 100px 0;
-  }
-}
-
-
-
-

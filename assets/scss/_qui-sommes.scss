@@ -1,0 +1,43 @@
+#who-are{
+  color: white;
+  height: calc(100vh - 95px);
+  hr{
+    width: 250px;
+    margin: 50px auto;
+    color: white;
+    border-top: 1px solid white;
+  }
+  .wrapper{
+    height: 100%;
+  }
+  h1{
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .flex{
+    div{
+      height: 100%;
+    }
+    div:not(.illustration){
+      width: calc(100% - 400px);
+      p{
+        width: 88%;
+        text-align: justify;
+        margin: 0 35px 15px 35px;
+        font-size: 20px;
+        /*&:first-child{
+          margin-top: 35px;
+        }*/
+      }
+    }
+    .illustration{
+      background: url("../img/background-home.png") no-repeat;
+      background-size: 250%;
+      background-position: 60%;
+      width: 350px;
+      height: auto;
+    }
+  }
+}
