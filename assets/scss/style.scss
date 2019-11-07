@@ -6,18 +6,14 @@
 @import "_calendar";
 @import "_qui-sommes";
 @import "_concept";
-
-//display: flex;
-//justify-content: center;
-//flex-direction: column;
-
-//Color
-//$principal = #DBC5AD;
+@import "_mention";
 
 .flex-around{display: flex;justify-content: space-around;}
 .flex-between{display: flex;justify-content: space-between;}
 .flex-start{display: flex;justify-content: start;}
 .flex-wrap{display:flex;flex-wrap: wrap;}
+
+.flex-direction-column{flex-direction: column}
 
 .margin_top_10{margin-top:10px;}
 .margin_left_10{margin-left: 10px;}
@@ -43,6 +39,12 @@
   max-width: 1200px;
   padding: 25px;
   margin: 0 auto;
+}
+
+@media (max-width: 580px){
+  .wrapper{
+
+  }
 }
 
 

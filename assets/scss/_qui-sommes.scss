@@ -8,7 +8,7 @@
     border-top: 1px solid white;
   }
   .wrapper{
-    height: 100%;
+    min-height: 100%;
   }
   h1{
     text-align: center;
@@ -26,18 +26,60 @@
         width: 88%;
         text-align: justify;
         margin: 0 35px 15px 35px;
+        font-family: Montserrat;
         font-size: 20px;
-        /*&:first-child{
-          margin-top: 35px;
-        }*/
+        font-weight: 300;
       }
     }
     .illustration{
       background: url("../img/background-home.png") no-repeat;
-      background-size: 250%;
+      background-size: 205%;
       background-position: 60%;
       width: 350px;
       height: auto;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  #who-are{
+    .flex{
+      flex-direction: column-reverse;
+      div:not(.illustration){
+        width: 100%;
+        p{
+          width: calc( 100% - 70px );
+          margin: 15px 35px 0 35px;
+          font-size: 16px;
+        }
+      }
+      .illustration{
+        background-size: 100%;
+        width: calc( 100% - 70px );
+        margin: 0 35px;
+        height: 250px ;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #who-are{
+    h1{
+      font-size: 28px;
+    }
+    .flex{
+      flex-direction: column-reverse;
+      div:not(.illustration){
+        p{
+          width: 100%;
+          margin: 15px 0 0 0 ;
+        }
+      }
+      .illustration{
+        margin: 0;
+        width: 100%;
+      }
     }
   }
 }

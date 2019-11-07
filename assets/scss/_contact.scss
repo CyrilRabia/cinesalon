@@ -18,8 +18,9 @@
     div{
       padding: 20px;
       ul{
-        margin: 0 0 35px 0;
+        margin: 0;
         font-size: 18px;
+        padding: 0;
         li{
           &:first-child{
             font-weight: bold;
@@ -33,6 +34,41 @@
           font-weight: 300;
         }
       }
+    }
+  }
+}
+
+@media (max-width:1050px ) {
+  #contact {
+    .flex {
+      flex-direction: column-reverse;
+      div {
+        ul {
+          margin: 0 auto 15px auto;
+        }
+      }
+      iframe{
+        width: 100%
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #contact {
+    .flex{
+      div{
+        padding: 0 0 15px 0;
+      }
+    }
+    h1 {
+      font-size: 28px;
+    }
+    li{
+      font-size: 16px;
+    }
+    iframe{
+
     }
   }
 }

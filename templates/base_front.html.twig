@@ -33,26 +33,8 @@
         {#{% include 'Front/footer.html.twig' %}#}
     </body>
 </html>
-<script>
-    function openMenu() {
 
-        $('#header').css({
-            'width': '320px',
-            'padding':'0 50px'
-        });
-
-        $('.extra-space').addClass('active');
-
-    }
-
-    function closeMenu() {
-        $('#header').css({
-            'width': '0px',
-            'padding':'0px'
-        });
-        $('.extra-space').removeClass('active');
-    }
-</script>
+<script src="{{ asset('js/functions_general.js') }}"></script>
 {% block script %}
 
 {% endblock %}

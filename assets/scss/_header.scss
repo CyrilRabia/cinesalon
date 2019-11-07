@@ -1,3 +1,21 @@
+.active{
+  a{
+    color: #000 !important;
+  }
+  background-color: #d1c1b1 !important;
+  .name-menu{
+    color: black !important;
+  }
+  .menu-icon {
+    &__line {
+      background: black !important;
+      &::before, &::after {
+        background: black !important;
+      }
+    }
+  }
+}
+
 .main-header {
   position: fixed;
   display: flex;
@@ -8,15 +26,15 @@
   width: 100vw;
   padding: 0 25px;
   color: white;
-  z-index: 1;
+  z-index: 8;
   transition: .4s ease-out;
 
   .name-menu{
     display: none;
     color: white;
     position: relative;
-    top: 14px;
-    right: 58px;
+    top: 1px;
+    right: 45px;
     font-size: 20px;
   }
 
@@ -57,6 +75,8 @@
     &__line {
       display: block;
       position: relative;
+      top: -13px;
+      right: -13px;
       background: white;
       height: 2px;
       width: 20px;
@@ -132,6 +152,9 @@
         }
       }
 
+    }
+    a{
+      font-size: 24px;
     }
 
     .nav-items {
