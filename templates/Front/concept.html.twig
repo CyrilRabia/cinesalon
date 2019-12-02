@@ -1,146 +1,262 @@
 {% extends 'base_front.html.twig' %}
 
 {% block title %}Concept - CineSalon{% endblock %}
+{% block meta %}CineSalon | Découvrez notre concept{% endblock %}
 
 {% block body %}
-    <div id="slides">
-        <ul class="slides-container">
-            <li><img src="{{ asset('img/carousel_0.jpg') }}" width="1680" height="1050">
-                <div class="caption-wrapper">
-                    <div class="caption">
-                        <div class="anim-1">
-                            <span>A</span>
-                            <span>&nbsp;</span>
-                            <span>p</span>
-                            <span>a</span>
-                            <span>r</span>
-                            <span>t</span>
-                            <span>i</span>
-                            <span>r</span>
-                            <span>&nbsp;</span>
-                            <span>d</span>
-                            <span>e</span>
-                            <span>&nbsp;</span>
-                            <span>1</span>
-                            <span>6</span>
-                            <span>m</span>
-                            <span>²</span>
+    <div id="concept">
+        <div id="slides">
+            <ul class="slides-container">
+                <li>
+                    <div class="custom-map">
+                        <img src="{{ asset('img/carousel_0.JPG') }}" width="1680" height="1050" alt="Image de carousel">
+                        <div class="btn" data-coords-top="15%" data-coords-left="0%" data-tippy-placement="top" >
+                            <div class="caption">
+                                <div class="anim-1">
+                                    <span>A</span>
+                                    <span>&nbsp;</span>
+                                    <span>p</span>
+                                    <span>a</span>
+                                    <span>r</span>
+                                    <span>t</span>
+                                    <span>i</span>
+                                    <span>r</span>
+                                    <span>&nbsp;</span>
+                                    <span>d</span>
+                                    <span>e</span>
+                                    <span>&nbsp;</span>
+                                    <span>1</span>
+                                    <span>6</span>
+                                    <span>m</span>
+                                    <span>²</span>
+                                </div>
+                                <div class="anim-2">
+                                    <span>p</span>
+                                    <span>r</span>
+                                    <span>o</span>
+                                    <span>f</span>
+                                    <span>i</span>
+                                    <span>t</span>
+                                    <span>e</span>
+                                    <span>z</span>
+                                    <span>&nbsp;</span>
+                                    <span>d</span>
+                                    <span>'</span>
+                                    <span>u</span>
+                                    <span>n</span>
+                                    <span>&nbsp;</span>
+                                    <span>e</span>
+                                    <span>s</span>
+                                    <span>p</span>
+                                    <span>a</span>
+                                    <span>c</span>
+                                    <span>e</span>
+                                    <span>&nbsp;</span>
+                                    <span>d</span>
+                                    <span>e</span>
+                                    <span>&nbsp;</span>
+                                    <span>c</span>
+                                    <span>o</span>
+                                    <span>n</span>
+                                    <span>f</span>
+                                    <span>o</span>
+                                    <span>r</span>
+                                    <span>t</span>
+                                </div>
+                                <div class="anim-3">
+                                    <span>e</span>
+                                    <span>t</span>
+                                    <span>&nbsp;</span>
+                                    <span>d</span>
+                                    <span>e</span>
+                                    <span>&nbsp;</span>
+                                    <span>d</span>
+                                    <span>é</span>
+                                    <span>t</span>
+                                    <span>e</span>
+                                    <span>n</span>
+                                    <span>t</span>
+                                    <span>e</span>
+                                    <span>,</span>
+                                    <span>&nbsp;</span>
+                                    <span>p</span>
+                                    <span>l</span>
+                                    <span>u</span>
+                                    <span>s</span>
+                                    <span>&nbsp;</span>
+                                    <span>q</span>
+                                    <span>u</span>
+                                    <span>'</span>
+                                    <span>u</span>
+                                    <span>n</span>
+                                    <span>&nbsp;</span>
+                                    <span>c</span>
+                                    <span>i</span>
+                                    <span>n</span>
+                                    <span>é</span>
+                                    <span>m</span>
+                                    <span>a</span>
+                                </div>
+                                <div class="anim-4">
+                                    <span>u</span>
+                                    <span>n</span>
+                                    <span>e</span>
+                                    <span>&nbsp;</span>
+                                    <span>v</span>
+                                    <span>a</span>
+                                    <span>l</span>
+                                    <span>e</span>
+                                    <span>u</span>
+                                    <span>r</span>
+                                    <span>e</span>
+                                    <span>&nbsp;</span>
+                                    <span>a</span>
+                                    <span>j</span>
+                                    <span>o</span>
+                                    <span>u</span>
+                                    <span>t</span>
+                                    <span>é</span>
+                                    <span>e</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="anim-2">
-                            <span>p</span>
-                            <span>r</span>
-                            <span>o</span>
-                            <span>f</span>
-                            <span>i</span>
-                            <span>t</span>
-                            <span>e</span>
-                            <span>z</span>
-                            <span>&nbsp;</span>
-                            <span>d</span>
-                            <span>'</span>
-                            <span>u</span>
-                            <span>n</span>
-                            <span>&nbsp;</span>
-                            <span>e</span>
-                            <span>s</span>
-                            <span>p</span>
-                            <span>a</span>
-                            <span>c</span>
-                            <span>e</span>
-                            <span>&nbsp;</span>
-                            <span>d</span>
-                            <span>e</span>
-                            <span>&nbsp;</span>
-                            <span>c</span>
-                            <span>o</span>
-                            <span>n</span>
-                            <span>f</span>
-                            <span>o</span>
-                            <span>r</span>
-                            <span>t</span>
-                        </div>
-                        <div class="anim-3">
-                            <span>e</span>
-                            <span>t</span>
-                            <span>&nbsp;</span>
-                            <span>d</span>
-                            <span>e</span>
-                            <span>&nbsp;</span>
-                            <span>d</span>
-                            <span>é</span>
-                            <span>t</span>
-                            <span>e</span>
-                            <span>n</span>
-                            <span>t</span>
-                            <span>e</span>
-                            <span>,</span>
-                            <span>&nbsp;</span>
-                            <span>p</span>
-                            <span>l</span>
-                            <span>u</span>
-                            <span>s</span>
-                            <span>&nbsp;</span>
-                            <span>q</span>
-                            <span>u</span>
-                            <span>'</span>
-                            <span>u</span>
-                            <span>n</span>
-                            <span>&nbsp;</span>
-                            <span>c</span>
-                            <span>i</span>
-                            <span>n</span>
-                            <span>é</span>
-                            <span>m</span>
-                            <span>a</span>
-                        </div>
-
-                        <div class="anim-4">
-                            <span>u</span>
-                            <span>n</span>
-                            <span>e</span>
-                            <span>&nbsp;</span>
-                            <span>v</span>
-                            <span>a</span>
-                            <span>l</span>
-                            <span>e</span>
-                            <span>u</span>
-                            <span>r</span>
-                            <span>e</span>
-                            <span>&nbsp;</span>
-                            <span>a</span>
-                            <span>j</span>
-                            <span>o</span>
-                            <span>u</span>
-                            <span>t</span>
-                            <span>é</span>
-                            <span>e</span>
-                        </div>
-
-
-
-
                     </div>
-                </div>
-            </li>
-            <li><img src="{{ asset('img/carousel_2.jpg') }}" width="1680" height="1050">
-                <div class="caption-wrapper">
-                    <div class="caption">
-
+                    <div class="caption-wrapper-bot">
+                        <div class="caption">
+                            Une isolation phonique étudiée au cas par cas et un traitement acoustique, pour un rendu optimum. Avec un large choix de couleurs pour les murs et de nombreuses options et finitions disponibles.
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li><img src="{{ asset('img/carousel_3.jpg') }}" width="1680" height="1050">
-                <div class="caption-wrapper">
-                    <div class="caption">
-
+                    <div class="caption-wrapper">
+                        {#<div class="caption">
+                            <div class="anim-1">
+                                <span>A</span>
+                                <span>&nbsp;</span>
+                                <span>p</span>
+                                <span>a</span>
+                                <span>r</span>
+                                <span>t</span>
+                                <span>i</span>
+                                <span>r</span>
+                                <span>&nbsp;</span>
+                                <span>d</span>
+                                <span>e</span>
+                                <span>&nbsp;</span>
+                                <span>1</span>
+                                <span>6</span>
+                                <span>m</span>
+                                <span>²</span>
+                            </div>
+                            <div class="anim-2">
+                                <span>p</span>
+                                <span>r</span>
+                                <span>o</span>
+                                <span>f</span>
+                                <span>i</span>
+                                <span>t</span>
+                                <span>e</span>
+                                <span>z</span>
+                                <span>&nbsp;</span>
+                                <span>d</span>
+                                <span>'</span>
+                                <span>u</span>
+                                <span>n</span>
+                                <span>&nbsp;</span>
+                                <span>e</span>
+                                <span>s</span>
+                                <span>p</span>
+                                <span>a</span>
+                                <span>c</span>
+                                <span>e</span>
+                                <span>&nbsp;</span>
+                                <span>d</span>
+                                <span>e</span>
+                                <span>&nbsp;</span>
+                                <span>c</span>
+                                <span>o</span>
+                                <span>n</span>
+                                <span>f</span>
+                                <span>o</span>
+                                <span>r</span>
+                                <span>t</span>
+                            </div>
+                            <div class="anim-3">
+                                <span>e</span>
+                                <span>t</span>
+                                <span>&nbsp;</span>
+                                <span>d</span>
+                                <span>e</span>
+                                <span>&nbsp;</span>
+                                <span>d</span>
+                                <span>é</span>
+                                <span>t</span>
+                                <span>e</span>
+                                <span>n</span>
+                                <span>t</span>
+                                <span>e</span>
+                                <span>,</span>
+                                <span>&nbsp;</span>
+                                <span>p</span>
+                                <span>l</span>
+                                <span>u</span>
+                                <span>s</span>
+                                <span>&nbsp;</span>
+                                <span>q</span>
+                                <span>u</span>
+                                <span>'</span>
+                                <span>u</span>
+                                <span>n</span>
+                                <span>&nbsp;</span>
+                                <span>c</span>
+                                <span>i</span>
+                                <span>n</span>
+                                <span>é</span>
+                                <span>m</span>
+                                <span>a</span>
+                            </div>
+                            <div class="anim-4">
+                                <span>u</span>
+                                <span>n</span>
+                                <span>e</span>
+                                <span>&nbsp;</span>
+                                <span>v</span>
+                                <span>a</span>
+                                <span>l</span>
+                                <span>e</span>
+                                <span>u</span>
+                                <span>r</span>
+                                <span>e</span>
+                                <span>&nbsp;</span>
+                                <span>a</span>
+                                <span>j</span>
+                                <span>o</span>
+                                <span>u</span>
+                                <span>t</span>
+                                <span>é</span>
+                                <span>e</span>
+                            </div>
+                        </div>#}
                     </div>
-                </div>
-            </li>
-        </ul>
-        <nav class="slides-navigation">
-            <a href="#" class="next">Next</a>
-            <a href="#" class="prev">Previous</a>
-        </nav>
+                </li>
+                <li><img src="{{ asset('img/carousel_2.JPG') }}" width="1680" height="1050" alt="Image de carousel">
+                    <div class="caption-wrapper-bot">
+                        <div class="caption">
+                            Des solutions d’assises simples, confortables, intégrées à la décoration de votre habitat et à la portée des budgets les plus raisonnables.
+                        </div>
+                    </div>
+                </li>
+                <li><img src="{{ asset('img/carousel_3.JPG') }}" width="1680" height="1050" alt="Image de carousel">
+                    <div class="caption-wrapper-bot">
+                        <div class="caption">
+                            La gestion de votre espace au bout des doigts avec une tablette tactile
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <nav class="slides-navigation">
+                <a href="#" class="next">Next</a>
+                <a href="#" class="prev">Previous</a>
+            </nav>
+        </div>
     </div>
 {% endblock %}
 
@@ -174,5 +290,21 @@
         function fourthAnimation() {
             $('.anim-4').addClass('animate');
         }
+
+        $(function() {
+            function btnCoords() {
+                $.each($(".btn"), function(index, value) {
+                    var $btn = $(this),
+                        $topCoords = $btn.attr("data-coords-top"),
+                        $leftCoords = $btn.attr("data-coords-left");
+                    $btn.css({
+                        top: $topCoords,
+                        left: $leftCoords
+                    });
+                });
+            }
+
+            btnCoords();
+        });
     </script>
 {% endblock %}

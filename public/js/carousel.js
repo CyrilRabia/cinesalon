@@ -9,18 +9,17 @@ $(function() {
         $slides.data('superslides').animate('prev');
     });
 
-    $slides.superslides({
-        hashchange: true,
-        play: 10000000//8000
-    });
+     $slides.superslides({
+         hashchange: false,
+         play: 10000000//8000
+     });
 
-    $('#slides').on('mouseenter', function() {
-        $(this).superslides('stop');
-        console.log('Stopped')
-    });
-    $('#slides').on('mouseleave', function() {
-        $(this).superslides('start');
-        console.log('Started')
-    });
+    /*
+     $('#slides').on('mouseenter', function() {
+         $(this).superslides('stop');
+     });
+     $('#slides').on('mouseleave', function() {
+         $(this).superslides('start');
+     });*/
 
 });

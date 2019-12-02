@@ -84,6 +84,19 @@ body{
   }
 }
 
+@media (max-width: 340px) {
+  #intro{
+    .logo{
+      width: 275px;
+      margin: -125px auto 0 auto;
+    }
+  }
+  .text-anim{
+    font-size: 22px !important;
+    letter-spacing: -3.0px !important;
+  }
+}
+
 /*
 ==========================================================================
 	 Mixins

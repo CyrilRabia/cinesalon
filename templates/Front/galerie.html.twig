@@ -1,0 +1,78 @@
+{% extends 'base_front.html.twig' %}
+
+{% block title %}Galerie - CineSalon{% endblock %}
+{% block meta %}CineSalon | Découvrez toutes nos photos{% endblock %}
+
+{% block body %}
+   <div id="galerie">
+       <div class="wrapper">
+           <h1>Galerie</h1>
+           <hr>
+           <!-- Container for the image gallery -->
+           <main class="container">
+
+               <!-- Full-width images with number text -->
+               <div class="mySlides show">
+                   <div class="numbertext">1 / 6</div>
+                   <img src="{{ asset('img/carousel_1.jpg') }}">
+               </div>
+
+               <div class="mySlides">
+                   <div class="numbertext">2 / 6</div>
+                   <img src="{{ asset('img/carousel_2.jpg') }}">
+               </div>
+
+               <div class="mySlides">
+                   <div class="numbertext">3 / 6</div>
+                   <img src="{{ asset('img/carousel_3.jpg') }}">
+               </div>
+
+               <div class="mySlides">
+                   <div class="numbertext">4 / 6</div>
+                   <img src="{{ asset('img/carousel_4.jpg') }}">
+               </div>
+
+               <div class="mySlides">
+                   <div class="numbertext">5 / 6</div>
+                   <img src="{{ asset('img/carousel_5.jpg') }}">
+               </div>
+
+               <div class="mySlides">
+                   <div class="numbertext">6 / 6</div>
+                   <img src="{{ asset('img/carousel_6.jpg') }}">
+               </div>
+
+               <section class="caption-container">
+                   <a class="prev">&#10094;</a>
+                   <p id="caption">The Woods</p>
+                   <a class="next">&#10095;</a>
+               </section>
+
+               <section id="thumbnail-section" class="row">
+                   <div class="thumbnail">
+                       <img class="demo cursor active" src="{{ asset('img/carousel_1.jpg') }}" alt="The Woods">
+                   </div>
+                   <div class="thumbnail">
+                       <img class="demo cursor" src="{{ asset('img/carousel_2.jpg') }}" alt="Cinque Terre">
+                   </div>
+                   <div class="thumbnail">
+                       <img class="demo cursor" src="{{ asset('img/carousel_3.jpg') }}" alt="Mountains and fjords">
+                   </div>
+                   <div class="thumbnail">
+                       <img class="demo cursor" src="{{ asset('img/carousel_4.jpg') }}" alt="Northern Lights">
+                   </div>
+                   <div class="thumbnail">
+                       <img class="demo cursor" src="{{ asset('img/carousel_5.jpg') }}" alt="Nature and sunrise">
+                   </div>
+                   <div class="thumbnail">
+                       <img class="demo cursor" src="{{ asset('img/carousel_6.jpg') }}" alt="Snowy Mountains">
+                   </div>
+               </section>
+           </main>
+       </div>
+   </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ asset('js/galerie.js') }}"></script>
+{% endblock %}

@@ -52,4 +52,12 @@ class FrontController extends AbstractController
     {
         return $this->render('Front/concept.html.twig');
     }
+
+    /**
+     * @Route("/galerie", name="galerie")
+     */
+    public function galerie()
+    {
+        return $this->render('Front/galerie.html.twig');
+    }
 }

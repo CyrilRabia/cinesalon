@@ -17,11 +17,15 @@ DirectoryIndex index.php
     Options -MultiViews
 </IfModule>
 
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://cinesalon.art/$1 [R,L]
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    Rewritecond %{HTTP_HOST} ^allwebsite.ovh$
-    Rewriterule ^(.*) https://www.allwebsite.ovh/$1 [QSA,L,R=301]
+    Rewritecond %{HTTP_HOST} ^http://cinesalon.art$
+    Rewriterule ^(.*) https://cinesalon.art/$1 [QSA,L,R=301]
 
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
